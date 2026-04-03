@@ -22,6 +22,8 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  position: relative;
+  overflow: hidden;
 }
 
 .title {
@@ -75,6 +77,12 @@
   border-radius: 10px;
   overflow: hidden;
   border: 2px solid rgba(107, 76, 59, 0.2);
+  transition: box-shadow 0.3s;
+}
+
+.health-bar-low {
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4), 0 0 24px rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
 }
 
 .health-fill {
@@ -130,9 +138,43 @@
   position: absolute;
   top: 30%;
   left: 50%;
-  font-size: 24px;
+  font-size: 26px;
   pointer-events: none;
   z-index: 10;
+}
+
+.nom-nom {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  font-weight: 900;
+  color: #6b4c3b;
+  text-shadow: 0 0 10px rgba(255, 159, 67, 0.5);
+  white-space: nowrap;
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* Background particles */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg-particle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 18px;
+  pointer-events: none;
 }
 
 .adam-kill {
